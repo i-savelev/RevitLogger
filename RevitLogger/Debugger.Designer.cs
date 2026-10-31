@@ -35,10 +35,18 @@ namespace RevitLogger
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.debugTable = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.debugTable)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // debug_table
+            // debugTable
             // 
             this.debugTable.AllowUserToAddRows = false;
             this.debugTable.AllowUserToDeleteRows = false;
@@ -64,7 +72,8 @@ namespace RevitLogger
             this.debugTable.DefaultCellStyle = dataGridViewCellStyle5;
             this.debugTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.debugTable.Location = new System.Drawing.Point(0, 0);
-            this.debugTable.Name = "debug_table";
+            this.debugTable.Margin = new System.Windows.Forms.Padding(5);
+            this.debugTable.Name = "debugTable";
             this.debugTable.ReadOnly = true;
             this.debugTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.debugTable.RowHeadersVisible = false;
@@ -74,21 +83,88 @@ namespace RevitLogger
             this.debugTable.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.debugTable.RowTemplate.Height = 24;
             this.debugTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.debugTable.Size = new System.Drawing.Size(608, 707);
+            this.debugTable.Size = new System.Drawing.Size(531, 333);
             this.debugTable.TabIndex = 2;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.debugTable);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(531, 333);
+            this.panel1.TabIndex = 3;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 250);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(531, 83);
+            this.panel2.TabIndex = 4;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(416, 17);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(101, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Открыть лог";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(12, 17);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(101, 23);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "Закрыть";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.textBox1.Location = new System.Drawing.Point(16, 53);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(35, 13);
+            this.textBox1.TabIndex = 1;
+            this.textBox1.Text = "Лог:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox2.Location = new System.Drawing.Point(47, 50);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(470, 20);
+            this.textBox2.TabIndex = 1;
+            this.textBox2.Text = "Путь к фалу логов";
             // 
             // Debugger
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(608, 707);
-            this.Controls.Add(this.debugTable);
+            this.ClientSize = new System.Drawing.Size(531, 333);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Debugger";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "debug";
             this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.debugTable)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -96,5 +172,11 @@ namespace RevitLogger
         #endregion
         public ColorDialog colorDialog1;
         public DataGridView debugTable;
+        private Panel panel1;
+        private Panel panel2;
+        public Button button1;
+        public TextBox textBox2;
+        public TextBox textBox1;
+        public Button button2;
     }
 }
